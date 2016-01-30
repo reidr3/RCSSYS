@@ -1,0 +1,70 @@
+*The titles and descriptions below are not what was put on the cards that were handed in. Those were better written and less technical in description.
+
+Project Title: Recipe Collection System
+
+Big User Stories
+1. Recipe Management
+	Add, remove and edit recipes in collection
+	Priority: High	Cost:10 days
+2. Recipe Viewing
+	Be able to see and use a recipe from collection
+	Priority: High	Cost: 8 days
+3. Recipe Organization
+	Sort list of recipes in collection based on some criteria, to allow user to quickly find a recipe
+	Priority: Medium	Cost: 2 days
+4. Ingredient Substitution
+	Add substitute ingredients to a list the user can access
+	Priority: Low	Cost: 3 days
+5. Recipe Ratings
+	Ability to rate recipes
+	Priority: Medium	Cost: 2 Days
+6. Ease of Access
+	Easy to use interface, tutorial overlay
+	Priority: Medium	Cost: 7 days
+7. User Profiles
+	Profiles for individual users to protect their recipes from outside modification
+	P: Low	Cost: 4 days
+8. Recipe Sharing	
+	Allows user to share recipes with friends who may or may not have the app
+	P: Low	Cost: 1 day
+9. Unit Conversion
+	Ability to convert a number contained in the recipe ingredients or directions from one unit to another
+	P: Medium	Cost: 2 days
+10. Recipe Pictures
+	Ability for user to add pictures to recipe
+	P: Low	Cost: 4 days
+11. App Appearance
+	Customization options including colour and layout
+	P: Low	Cost: 14 days
+12. Recipe Search
+	Ability to search for one specific recipe by name
+	P: Low	Cost: 7 days
+
+
+Detailed Stories
+
+Iteration 1
+1. Recipe add 
+	From: Recipe Management
+		P:H, C:3
+2. Recipe remove 
+	From: Recipe Management
+		P:M C:3
+3. Edit recipe title 
+	From: Recipe Management
+		P:L C:2
+4. Edit recipe ingredients 
+	From: Recipe Management
+		P:M C:2
+5. Edit recipe directions 
+	From: Recipe Management
+		P:M C:2
+6. View one recipe 
+	From: Recipe Management
+		P:H C:4
+7. View two recipes simultaneously 
+	From: Recipe Management
+		P:L C:2
+8. Change from one recipe to another
+	From: Recipe Management
+		P:L C:3

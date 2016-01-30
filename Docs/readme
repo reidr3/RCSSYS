@@ -1,0 +1,46 @@
+ Packages;
+ 	src/comp3350.rcssys.application
+ 		Contains Main
+ 	src/comp3350.rcssys.business
+ 		Used to pass worker objects between the presentation layer and stub database/database. 
+ 		Also includes UnitConversions (not implemented, as discussed after class, to make up our logic portion of business)
+ 	src/comp3350.rcssys.objects
+ 		Contains:
+ 		  - Recipe
+ 		  - Ingredient
+ 		  - Constituent
+ 		  - LifeStyle
+ 		  - Allergy
+ 		  - Tag
+ 	src/comp3350.rcssys.persistence
+ 		The database implementation for our system
+ 	src/comp3350.rcssys.presentation
+ 		UI files for Home page, displaying list of stored recipes, displaying recipes, and error messages
+ 	src/comp3350.rcssys.presentation.ArrayAdaptors
+ 	src/comp3350.tests
+ 		Contains the file that executes test suites for business and objects
+ 	src/comp3350.tests.business
+ 		Tests for UnitConversions
+ 	src/comp3350.tests.objects
+ 		Tests for all classes in src/objects
+ 		
+ 	
+ Lib file contents;
+ 	junit.jar
+ 	hsqldb.jar
+ 	
+ Other files;
+ 	Compile.bat - Removes all compiled class files and re-builds the project's test and logic code by calling javac, without preconditions
+ 	RunUnitTests.bat - Executes all unit tests without preconditions
+ 	assets/db/sc.script - The design/creation of the database
+ 	
+Iteration 2:
+    Major changes include the addition of allergy and lifestyle tags along with working persistence, 
+    the ability to edit recipes, and Recipes no longer contain ingredients, but contain an object that
+    holds and ingredient, an amount and a unit. One issue that we have not fixed is that we cannot edit
+    the title of the recipe.
+    
+Iteration 3:
+	Major UI changes to simplify layout. Added a new variable to recipe objects that would act as their primary key in the database to allow 
+	the ability to edit recipe titles. Added full integration and acceptance tests as required.
+     

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background" >
+    
+    <LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal">
+        	
+        <Button
+       	    style="?android:attr/borderlessButtonStyle"
+       	    android:background="@color/spice"
+	        android:layout_weight="1"
+            android:layout_width="0dp"
+	       	android:layout_height="wrap_content"
+	       	android:text="@string/clear"
+	        android:onClick="filterClear"/>
+        
+       	<Button
+       	    style="?android:attr/borderlessButtonStyle"
+       	    android:background="@color/flavor"
+	        android:layout_weight="1"
+            android:layout_width="0dp"
+	       	android:layout_height="wrap_content"
+	       	android:text="@string/search"
+	        android:onClick="searchClick"/>
+       	
+       	<Button
+       	    style="?android:attr/borderlessButtonStyle"
+       	    android:background="@color/spice"
+	        android:layout_weight="1"
+            android:layout_width="0dp"
+	       	android:layout_height="wrap_content"
+	       	android:text="@string/cancel"
+	        android:onClick="filterCancel"/>
+       	
+    </LinearLayout>
+    
+    
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:text="@string/filter_title_general"
+       	android:textColor="@color/text" />
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:text="@string/filter_title_title"
+       	android:textColor="@color/text" />
+    <EditText
+        android:id="@+id/fragment_filter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/filter_hint_title"
+        android:textColor="@color/text"
+        android:textColorHint="@color/textHint" />
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:text="@string/filter_title_ingredients"
+       	android:textColor="@color/text" />
+    <EditText
+        android:id="@+id/fragment_filter_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/filter_hint_ingredients"
+        android:textColor="@color/text"
+        android:textColorHint="@color/textHint" />
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:text="@string/filter_title_allergens"
+       	android:textColor="@color/text" />
+    <EditText
+        android:id="@+id/fragment_filter_allergens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/filter_hint_allergens"
+        android:textColor="@color/text"
+        android:textColorHint="@color/textHint" />
+    
+    <TextView
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:text="@string/filter_title_lifestyles"
+       	android:textColor="@color/text" />
+    <EditText
+        android:id="@+id/fragment_filter_lifestyles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/filter_hint_lifestyles"
+        android:textColor="@color/text"
+        android:textColorHint="@color/textHint" />
+
+</LinearLayout>

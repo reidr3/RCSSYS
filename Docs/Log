@@ -1,0 +1,508 @@
+COMP 3350 Project Log
+
+Repo Path: /home/student/boucha13/cvs/repository
+
+Team members;
+	Mark Cortilet
+	Ryan Reid
+	Daniel Bouchard
+	Josh Chan
+	Chukwu Thomas Idika Mba
+	
+Jan 26	
+	Entire team met up to discuss programming standards.
+	Chukwu rants about GMO foods
+	
+Jan 28
+	Chukwu, Josh, Mark and Ryan met to discuss UI design and beginning to divide tasks.
+	Uploaded copy of srsys to repo
+	Chukwu ranted about us writing about his rants
+
+Jan 31
+	Daniel and Chukwu work on the resolving errors on the creation of Sample Database
+	
+Feb 2
+	Adding non logged details.
+	Developer tasks:
+		UI - Josh checked it out.
+		Ingredients object - Daniel checked it out.
+		Recipes object - Ryan checked it out.
+		Business (Database access and logic processing) - Mark checked it out.
+		Stub Database - Chukwu checked it out.
+		
+	Ryan - Spent 2 hours refactoring/adding recipe tests + added recipe equals method.
+
+	Basic refactoring in database and took out dead code (misc. Ingredient methods)
+	Also played around with the interface, renamed Students button to Recipes, took off courses + registartions and added a new graphic.
+	Time spent: ~1 hour
+
+Feb 3
+	Mark - Finished the majority of the UnitConversions code and tests, still needs a couple tweaks and some polish, but is done (not done done)
+			3.5 hrs spent
+			Annoyed someone took out my smart ass comments documenting C's rants
+				
+Feb 4
+	Full team met to discuss using pair programming, peer review as discussed in class. Reviewed code already written to make sure it met team standards
+		and finalize standards.
+		
+	Ryan - Updated coding standards on Recipe/Recipes tests. Someone needs to review my code. Added Mark's smart ass comments documenting C's rants back
+			(Sorry Mark)
+			Aside from review, Recipe/Recipe test should be done. Time spent ~8 hours from start to now, including various reviewing
+			log editing, and refactoring stub database.
+
+Feb 5
+	Mark - Finished off the unit conversions code and tests. About 4 hours spent. Probably missing a few test cases, but very nearly done done
+	
+
+Feb 6
+	Josh - Implemented user stories: "View Recipe", and "Search". Began adding unit tests to AccessRecipes
+		   to test new search feature. Approx 7 hours.
+
+Feb 10
+    Daniel - Implemented Recipe object: ~3.5 hours
+    Ryan - Added a complete list of developer tasks. If I missed anything, please add it in.
+    	   Fixed coding standards throughout all of the project *SHOULD* be up to code now. ~30 minutes spent
+    Chukwu - Tested app on Nexus 7 tablet.
+    Mark - Reviewed Recipe, Ingredient and their tests. Refactored a little to include a few extra cases
+    Chukwu - organized and printed out the documents for the paper submission.
+    
+Feb 11
+	Josh - Fixed failures occurring in RecipeTest testBadMutations.
+		   Left one intentionally(?) produced failure in UnitConversionsTest testNegativeNumbers.
+		   Removed code smells, removed empty methods in RecipeListActivity. 
+		   Made "open" option visible in RecipeListActivity's ListView context-menu.
+		   ~ 30 min
+		   
+Feb 23
+	Mark, Ryan, Daniel, and Josh met to review Iteration 1 feedback.
+	New plans to:
+		- add actual persistence: Chukwu
+		- change placement of mass and unit to Recipe object: Daniel
+		- add allergy and lifestyle tags for Ingredient: Daniel
+		- logic to sort by name, allergy, and lifestyle: Mark, Ryan
+      	- add the ability to edit recipes: Josh
+      	- review of code: Everyone!
+      	- get better tests: Everyone!
+      	- get rid of code smells: Everyone!
+Feb 25
+	Mark - Attempted to fix broken code. Nearly finished, just waiting on feedback from team before doing the last couple things.
+			Time: ~1.5 hours.
+      	
+Feb 27
+	Ryan -  Rolled back my code to a working copy, almost all tests were failing.
+			Kept allergy + lifstyle, did slight modification and added tests
+			Changed around Constituent and added tests for it. Recipe is not using
+			Constituent yet (Using the working code still.) Changes have been uploaded.
+			Time spent. ~2.5 hours.
+			
+			Finished fixing the code, everything Daniel had uploaded now works, all tests pass.
+			Time spent ~1.5 hours
+Mar 2
+	Mark - Added the beginnings of our sort methods to the stub database, and a proper compareTo() for Recipe. Can now sort the list alphabetically (ascending and descending)
+			Spent most of my time looking up the built in methods for sorting with ArrayLists
+			Added boolean methods to Recipe, Constituent and Ingredient that return true for allergens
+			Refactored Ingredient and Constituent to use built in ArrayList methods
+			Below are basic implementations, since we haven't discussed details yet. All are currently dead code until we set those;
+				Added a way of filtering which stored recipes have ingredients that are allergens (any and specific)
+				Added filter for recipes that contain an ingredient
+				Added filter for recipes that belong to a lifestyle
+			Time: 2.5 hours
+			
+Mar 4
+	Team-Chukwu - Discussed current tasks, added Docs to main software files
+		Time: 25 mins
+	Daniel, Josh, Mark - Refactor Allergy and Lifestyle, fixed some tests
+		Time: 25 mins
+	Mark - Created a RecipesFilter class in business package for sorting and filtering for specific things listed above. References DataAccessStub methods
+		Time: 1 hour
+    
+Mar 5
+	Josh - Fixed mislabelled Activity title for HomeActivity
+		 - New abstract activity: RecipeActivity
+		 		- An activity that expects a Recipe name be passed as an extra.
+		 		  Uses that Recipe name to load a recipe from the database.
+	 	 - RecipeDisplay activity now extends RecipeActivity
+	 	 - New EditRecipe activity.
+	 	 		- Persistence portion not yet implemented.
+	 	 		- Current implementation for adding a new ingredient is highly subject to change.
+	 	 		  Need functionality similar to a ListView, but without consuming the parent View's scroll event.
+	 	 		  Currently using a LinearLayout that adds a custom View, EditableIngredient.
+	 	 		  
+	 	 
+	 	 > Point for next meeting, Recipe currently initializes the fields "description" and "directions"
+	 	   to "Missing directions" or "Missing directions". Should change it so it initializes as a blank ""
+	 	   instead?
+	 	   
+	 	   Reasons Why:
+	 	   	- More accurately represents uninitialized state. More sensible processing on development side.
+	 	   	- Presentation end should handle the display of empty directions/descriptions. Makes it easy
+	 	   	  to check for the empty case, so that Android 'hints' appear.
+	 	   	  
+	 	  > When I picked up the latest update, there are errors with RecipesFilter? Calls to DatabaseStub methods
+	 	    as though they're static when right now, they aren't...Will inquire at next meeting.
+	 	   	  
+ 	   	  Due to the precence of errors from previous commits, I've committed this a new branch named
+ 	   	  	"RCSSYS_Interface_Updates".
+	 	   	  
+ 	   	  Time: 5 hours
+ 	   	  
+Mar 6 
+	Mark - Continued work on RecipesFilter, and began testing on it
+		- Committed the changes I made to dataAccessStub before, and fixed things I broke in Ingredient and Constituent
+		- Still need to refactor some of the filter methods to take strings as parameters instead of objects
+		Time: 2.5 hours
+
+	Ryan - Added a couple data verifies (In the branch)
+			Added Ingredients back to the database and added AccessIngredients and did basic DataAccess interface (In the branch for current UI work that needs to be done)
+			Time 2.5 hours
+			
+Mar 7
+	Ryan - Added the various AccessThings we needed (Ingredients, Allergies, LifeStyles) in the main repo
+			Added the methods to dataAccessStub. Updated out DataAccess interface (things weren't in camel case) and added a missing method
+			Will be adding default allergies and lifestyles to stub database for testing purposes.
+			Time spent: ~1 hour.
+			
+			Added more "stub" data into the stub database with other minor refactoring throughout the project
+			Time Spent ~45 min
+			
+			Fixed some errors in the stub.
+			Tested our dataAccess
+			Adding the needed facilities for dependency injection
+			Time Spent ~ 2.5 hours
+			
+	Mark - Refactored RecipesFilter methods to accept strings as parameters. Created methods to generate these strings that should be called when used in ui. 
+		- Still need to thoroughly test
+		Time: 1.5 hours
+		
+Mar 8
+	Ryan - Added test cases for all 4 Access Files (Recipes, Ingredients, Allergies, Lifestyles)
+			Fixed bugs in the 4 access files, stopped it from allowing null values being passed to the database
+			Fixed minor errors in each of the classes (Equals methods were added)
+			Added an extra set of null checking in the stub database just to make sure no null's can be added.
+			Time spent - ~4 hours
+			
+			Fixed up coding standards throught the project (Left things I knew were still being worked on [UI and Mark's Recipe Filter stuff])
+			Time spent ~ 30 minutes
+	Mark - Fixed some bugs in RecipesFilter, and finished testing with the current stub db. Still need to try it where more than one recipe has actual constituents
+		Time: 2 hours
+    
+Mar 8
+	Josh - New ingredient ViewGroup list fully implemented. Modifications made to EditRecipe, related
+			classes in presentation package, and related XML layouts.
+
+Mar 8		
+	chukwu - worked on dataAccess and DataAccessObjects. finished DataAccess and part of DataAccessObjects. Had to wait and talk to team members to know if we to 
+			 allergies and Lifestyle. but finished with recipes and ingredients and committed. 
+    
+		  Time: 2.5 hours
+		  
+March 9
+	Josh - Reviewing merge results. Did some small bug fixes and smell cleaning.
+		   Database isn't implemented? Can't commit yet.
+		Time 1 hour
+		
+	Josh, Ryan, Mark, Chukwu
+		 - Further integration with database done
+		 - UI fixes for creating new recipes
+		
+		Time 2 Hours
+		
+    Daniel - Simplify tests ( assertEquals, instead of assertTrue )
+           - Remove assertNotNulls
+           - Aided with Database programming
+           - Updated project to get ready for final release (readme, final read through)
+           
+       Time: 3.5 hour
+		  
+	Josh 	- Finished UI-persistence integration. Used stub database to test UI elements. 
+			- Cleaned some code smells (Generics with Recipe)
+			
+			- Still need to test actual database.
+			
+	   Time 2.3 hours
+	   
+	  Ryan -
+	  		Pair Programming with Chukwu for a bit (Getting intial databaseObjects ready) ~45 minutes
+	  		Pair Programming with Mark and Josh (Working on UI) ~2 1/2 hours
+	  		Getting dataAccessObjects working (Nearing completetion) ~6 hours
+	  		
+	  		Finished cleaning code, got the AllTests.txt file, changed the compile.bat as needed.
+	  		Time spent ~1 hour
+	  		
+	 chukwu - tested app on the tablet. did some review and editing. printed out documentation.
+	 
+	  		
+Mar 13
+	Team - Met to review Iteration 2 progress and plan work for Iteration 3.
+	
+Mar 17
+	Daniel - Refactoring of presentation
+	
+	Dur: 2 hrs.
+	
+Mar 18
+	Chukwu - started the hashing process for unique id generation.
+		   - not making progress with the hashing method. too many errors.
+		
+		Time: 1 hr.
+Mar 19
+	Daniel - Refactoring of presentation
+		Dur: 30 mins
+		
+	Ryan - Added AccessAllergies/LifeStyles back with proper changes that were made in Recipes and Ingredients
+			Added tests for Allergies/LifeStyles back in
+			Added routines for Allergies/LifeStyles back into stub/stub tests, and made new ones for DataAccessObjects
+			Added needed routines for DataAccess Interface.
+			-Will be working on testing DB
+			
+		Dur: 1 hour
+		
+Mar 20
+	Dan,Mark,Ryan,Josh
+		- Peer programming.
+		- Touchups to RecipeDisplay
+		- Began writing acceptance testing
+		
+		Dur: 3 hours
+		
+	Daniel - Changes to Recipe Display
+		Dur: 2 hrs
+		
+	Chukwu 
+			- team decided to dump using hashing method for Unique Id generation
+			- Scrapped all work on hashing and updated.
+Mar 22
+	Ryan
+		-Added testing to DataAccessObjects (Real database)
+		-Fixed broken routines + Added null checks to real database
+		What now works in database:
+			All of the recipe accessing except for updating name (Need unique key still)
+			All of the ingredient accessing except for updating (Need unique key still)
+			All of the Allergy accessing except for updating (Need unique key still)
+			All of the LifeStyle accessing except for updating (Need unique key still)
+			Allergies and LifeStyles can now be added and properly return from Ingredients in the real database.
+			-Need to refactor those into a Tags table, but works how it is now.
+			
+		Time spent: ~ 4 hours
+
+Mar 23
+	Mark
+		-Added test cases for Acceptance tests
+		-Not sure how to check if new ingredient works properly, will check with Josh
+		
+		Time spent: 2 hours
+	
+	Chukwu
+		-created unique ID for Recipe
+		-created package ID generator using singleton
+		-refactored AccessRecipes
+		
+		Tme spent: 3 hours
+		
+
+Mar 24
+    Daniel
+        -Implemented adding and deleting ingredients
+        
+        Dur: 4.5 hrs
+        
+Mar 25
+    Daniel
+        -Finished implementing adding and deleting ingredients
+        
+        Dur: 0.5 hrs
+        
+March 25
+	Josh, Mark
+		- Fixed database and recipe bug where using getRecipes put the wrong
+		   ingredients in the wrong recipes.
+	   Time Spent: 2 hours
+		  
+Mar 25
+	Josh
+		-Implemented UI for recipe filtering options.
+			- Refactored RecipeListDisplay to use fragments
+			
+		Time Spent: 5 hours
+		
+    Mark - Continued work on acceptance tests
+    	 - Started and finished integration tests
+    	 -Helped Josh debug
+    	 
+    	 Time Spent : 5 hours
+    	 
+Mar 26 Josh
+		- Fixed bug with RecipeListActivity with fragment overlapping and screen oreintation change.
+		- Other small fixes
+		
+		Time Spent: 40 min
+		
+	Chukwu
+		- having problems with code for loading last recipe Id from database and saving. since im using a static variable
+		  in the ID generator 
+		  
+		  Time Spent: 40 mins
+Mar 26 Ryan
+		- Added database facilities
+		- Refactoring for RecipeID
+		
+		Time Spent: 2 hours
+		
+Mar 26 Mark
+		-Factored out duplicate code from filterRecipes
+		
+		Time spent: 0.5 hours
+		  
+ Mar 27 Josh
+ 		- Small bug fixes
+		
+		Time Spent: 1 hour
+		
+Mar 27 Josh, Mark
+		- Bug fixes to RecipeFilter
+		
+		Time Spent: 1 hour
+		
+		Ryan
+			-Started abstracting Access* out, then Daniel changed his mind :(
+			-Remove AccessAllergies/Lifestyles
+			-Fixed tests due to that change
+			-Refactored Database (No more Allergy/LifeStyle table)
+			
+			Time Spent: 1 1/2 hours.
+		Ryan
+			-Started refactoring Access* into AccessItems, group decision was it was awful idea...
+			Time spent: Far to long. (Aprox 2 hours.)
+			
+		
+		Chukwu
+			- tried fixing the IDGenerator
+			- removed IDGenerator class from Business, beacause Ryan suggested a better way of doing it
+			- created method for recipe ID in AccessRecipes
+			- refactored Access Ingredients, Access recipes, DataAccess and DataAccessObjects
+			
+			Time: 3 hours
+			
+		Josh
+		- Minor UI fixes.
+			- In home activity, fixed logo overlapping button in landscape orientation.
+			- Implemented selection highlighting in RecipeDisplay
+			
+		Time Spent: 3 hours
+	
+Mar 28	Josh
+		- Updated presentation to use recipe ID's to identify recipes where names were used before.
+		- Enabled name editing in RecipeDisplay
+		- Small logical bug fixes
+		
+		Time Spent: 1.5 hours
+		
+Mar 29	Ryan
+		-Fixed some coding standards minor refactoring and took out some code smells
+		
+		Time spent: 1 hour.
+		
+		Ryan
+		-Fixed some data base problems(Allergies/LifeStyles not being added as intended)
+		-Added in .bat tests and fixed them.
+		-Added AllTests.txt
+		Time spent: 3.5 hours
+		
+		Mark
+		-Finalized recipe acceptance testing. Wrote up hard copy of retrospective and readme for handin
+		
+		Time spent: 1.5 hours
+		
+		Daniel
+		  - Finalized UI (added lifestyles and allergies)
+		  
+		  Dur: 4 hrs
+		  
+	   Josh
+	   	- Implemented temporary (for viewing, does not permenantly modify original recipe) unit conversions on RecipeDisplay
+	   		- Changes to RecipeDisplay, IngredientAdapter, UnitConversions, and related XML files.
+	   		- Minor refactoring to IngredientAddition
+	   		- Fixed 4.4.2 drawing issue with getDrawable
+	   		
+   		Time spent: 2.2 Hours
+Mar 30
+	   Chukwu
+	   	-Ran exploratory tests on the nexus tablet. found a bug when adding ingredients after creating a new recipe. 
+	   	- traced the buy to the preesentation layer with Ryan. Daniel then fixed the problem.
+	   	- ran other tests on the devive.
+	   	
+	   	Josh, Ryan, Mark, Dan
+	   	- Various refactoring, bugfixes.
+	   	
+	   	Time spent: 3 hours
+		  		  
+TASKS TO DO:
+
+Developer task list for Iteration 3:
+	Database: 
+		Attach Allergy and Lifestyles tables to Ingredients
+		Minor changes to access methods
+		Adding in access methods for Allergy and Lifestyles
+		Interface for dataAccesss
+	UI: 
+		Implement ability to convert units while editing ingredients
+		Implement ability to sort recipes
+		Change basic layout of screens
+	Object: Chuckwu
+		Refactor objects
+		Add unique keys to each class for db purposes
+	Logic:
+		Refactor, additional tests
+		
+Developer task list for iteration 2:
+
+Refactor Ingredient- Remove quantity features and create a data structure in/or working with Recipe to
+						      manage Ingredient and quantity. Something similar to a key-value-pair list.
+Review Recipe/Recipe test code: Up for grabs
+DataAccess test code: Up for grabs
+
+Database:
+	Implement sql database - Chukwu
+
+UI:
+	Implement ability to edit recipes
+	Implement sort button
+	
+Object:
+	Refactor objects for new changes
+	Add flagging objects (Lifestyle and Allergies)
+	New ingredient object (Contituent)
+	
+Logic: (Mark)
+	Add sorting by name (Ascending and descending)
+	Add sorting by Allergy
+	Add sorting by Lifestyle
+
+
+
+Complete Developer task list for iteration 1:
+
+UI - Josh checked it out
+	Sub tasks all checked out by Josh
+	Create home page 		-Ryan did basic editing on the home page to update it for our project ~30 minutes spent.
+	Create Recipe List page
+	Create Recipe View page
+	
+Objects
+	Create Recipe Object - Checked out by Ryan	Aprox time spent: 3 hours
+	Create Recipe Tests - Checked out by Ryan	Aprox time spent: 3 hours
+	Create Ingredient Object - Checked out by Daniel
+	Create Ingredient Tests - Checked out by Daniel
+	
+Business - Checked out by Mark
+	Sub tasks
+	Create logic layer(Unit conversions) - Checked out by Mark
+	Test Unit Conversions - Checked out by Mark
+	Create AccessRecipes - Checked out by Mark, Some edits/additions were done by Josh
+	Test AccessRecipes - Checked out by Josh
+	
+Stub Database - Checked out by Chukwu
+	subtasks
+	create database
+	add sample recipes
+	

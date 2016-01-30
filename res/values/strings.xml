@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Recipe Collection System</string>
+    <string name="action_settings">Settings</string>
+    <string name="create">Create</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="name">Name</string>
+    <string name="fatalError">Fatal error</string>
+    <string name="warning">Warning</string>
+    <string name="title_activity_recipe_list">Recipe List</string>
+    <string name="recipes">Recipes</string>
+    <string name="recipe_collection_system">Recipe Collection System</string>
+    <string name="title_activity_recipe_display">Recipe Display</string>
+    <string name="title_activity_ingredient_add">Add Ingredient</string>
+    <string name="ingredient">Ingredients</string>
+    <string name="title_activity_edit_recipe">Edit Recipe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="img">Chef hat image</string>
+    <string name="search_button">Search</string>
+    <string name="search_hint">Enter search here&#8230;</string>
+    <string name="no_ingredient">No Ingredients</string>
+    <string name="description">Description</string>
+    <string name="description_view">Description</string>
+    <string name="directions">Directions</string>
+    <string name="directions_view">Directions</string>
+    <string name="recipe_title_view">Recipe Title</string>
+    <string name="ingredient_hint">Ingredient name&#8230;</string>
+    <string name="ingredient_qty">QTY</string>
+    <string name="ingredient_cancel">X</string>
+    <string name="name_view">NAME</string>
+    <string name="ingredient_qty_view">QTY</string>
+    <string name="recipe_title">Recipe Title</string>
+    <string name="add_ingredient">Add new ingredient</string>
+    <string name="newRecipe">New Recipe</string>
+    <string name="refreshList">Refresh List</string>
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_filter">FilterActivity</string>
+    <string name="title_activity_recipe_list_fragment">RecipeList</string>
+    <string name="title_activity_recipe_list_ff">RecipeListFf</string>
+    <string name="save">Save</string>
+    <string name="ing_add">New Ingredient</string>
+    <string name="new_ing_name">Ingredient name</string>
+    <string name="new_ing_amt">Amount</string>
+    <string name="new_ing_allergy">Allergies</string>
+    <string name="new_ing_ls">Life Styles</string>
+    <string name="new_ing_allergy_hint">Allergy</string>
+    <string name="new_ing_ls_hint">Life Style</string>
+    <string name="add">+</string>
+    <string name="new_ing_delete">-</string>
+    <string name="new_tag">Tag Name</string>
+    <string name="recipeDisplay_convertText_from">Convert from </string>
+    <string name="recipeDisplay_convertText_to"> to </string>
+    
+    <string name="filter_title_general">Find recipes with&#8230;</string>
+    <string name="filter_title_title">these words in the title:</string>
+    <string name="filter_title_ingredients">all of these ingredients:</string>
+    <string name="filter_title_allergens">none of these allergens:</string>
+    <string name="filter_title_lifestyles">all of these lifestyles:</string>
+    
+    <string name="filter_hint_title">Recipe Title</string>
+    <string name="filter_hint_ingredients">Ingredient1, Ingredient2&#8230;</string>
+    <string name="filter_hint_allergens">Allergy1, Allergy2&#8230;</string>
+    <string name="filter_hint_lifestyles">Lifestyle1, Lifestyle2&#8230;</string>
+    
+    <color android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/youSay" name="background">#000E00</color>
+    <color android:layout_width="wrap_content" android:id="@+id/sail" android:layout_height="wrap_content" name="text">#9C9794</color>
+    <color android:layout_width="wrap_content" android:id="@+id/twist" android:layout_height="wrap_content" name="textHint">#4F4E4F</color>
+    <color android:layout_width="wrap_content" android:id="@+id/wicked" android:layout_height="wrap_content" name="flavor">#254617</color>
+    <color android:layout_width="wrap_content" android:id="@+id/wicked" android:layout_height="wrap_content" name="flavor2">#333333</color>
+    <color android:layout_width="wrap_content" android:id="@+id/wicked" android:layout_height="wrap_content" name="spice">#263608</color>
+    <color android:layout_width="wrap_content" android:id="@+id/wicked" android:layout_height="wrap_content" name="disabled">#333333</color>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/background" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_weight="0.75" >
+
+        <EditText
+            android:id="@+id/editable_ingredient_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="@string/ingredient_hint"
+            android:textColor="@color/text"
+            android:textColorHint="@color/textHint" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/editable_ingredient_quantity"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="@string/ingredient_qty"
+            android:inputType="number"
+            android:textColor="@color/text"
+            android:textColorHint="@color/textHint" />
+
+        <Spinner
+            android:id="@+id/editable_ingredient_unit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editable_ingredient_name"
+            android:textSize="50sp" />
+        
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/editable_ingredient_button_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:onClick="clickRemoveEditableIngredient"
+        android:text="@string/ingredient_cancel"
+        android:textColor="@color/text"
+        android:background="@color/flavor" />
+
+</LinearLayout>

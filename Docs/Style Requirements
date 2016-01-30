@@ -1,0 +1,44 @@
+Style Requirements
+
+Naming:
+
+	- Capitalize classes
+	- CamelCase
+	- Verbs for function names
+	
+	Android:
+		XML ID's : ID's should be of the format <ActivityName>_<ElementType>_<FunctionName>
+			E.g.
+				"@+id/recipeListActivity_editText_search"
+				For an EditText in activity_recipe_list.xml that is used for recipe search.
+
+Commenting:
+
+	-Obscure code only
+	
+Spacing:
+
+	- Always space after '.'
+	- Always space after '(' and before ')'
+	- Always newline after '{' and space before
+	- Indentation should be 4 spaces
+	
+Bracing:
+
+	- Open curly braces should be at the end of the line
+	- Always use braces where applicable
+	- Else if's should be between curly braces
+	
+	- When returning:
+			//space
+			return x;
+		}
+
+Misc:
+	
+	- Never use multiple return statements
+	- Only use "break" with proper justification
+	- Design with a fail fast philosophy; avoid in-code error checking
+	- Topically and alphabetically organized
+	- Order methods as so: Public, Private, Protected, Default
+	- Order imports alphabetically

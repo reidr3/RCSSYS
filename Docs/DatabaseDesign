@@ -1,0 +1,13 @@
+ \/ Ingredient( _iID_, name )
+Substitution( _iID_,_iID_ )
+ \/ Recipes( _rID_, name, Directions, Rating )
+ \/ Allergy( _aID_, name )
+ \/ LifeStyle( _lID_, name )
+ \/ Constituent( _rID_,_iID_, amount, unit )
+isAnAllergy( _iID_,_aID_ )
+partOfLifestyle( _iID_,_lID_ )
+
+first iteration:
+    -Ingredient
+    -Recipe
+    -isInRecipe

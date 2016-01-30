@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comp3350.rcssys"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="tests.objects"
+        android:targetPackage="comp3350.rcssys" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".presentation.HomeActivity"
+            android:label="RCSSYS" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.RecipeListActivity"
+            android:label="@string/title_activity_recipe_list" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="HomeActivity" />
+        </activity>
+        <activity
+            android:name=".presentation.RecipeDisplay"
+            android:label="@string/title_activity_recipe_display" >
+        </activity>
+        <activity
+            android:name=".presentation.IngredientAddition"
+            android:label="@string/title_activity_ingredient_add" >
+        </activity>
+        <activity
+            android:name=".presentation.EditRecipe"
+            android:label="@string/title_activity_edit_recipe" >
+        </activity>
+        <activity
+            android:name=".presentation.FilterActivity"
+            android:label="@string/title_activity_filter"
+            android:parentActivityName=".presentation.RecipeListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.rcssys.presentation.RecipeListActivity" />
+        </activity>
+        <activity
+            android:name=".RecipeListFragment"
+            android:label="@string/title_activity_recipe_list_fragment"
+            android:parentActivityName=".presentation.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.rcssys.presentation.HomeActivity" />
+        </activity>
+        <activity
+            android:name="comp3350.rcssys.presentation.RecipeListFf"
+            android:label="@string/title_activity_recipe_list_ff"
+            android:parentActivityName=".presentation.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.rcssys.presentation.HomeActivity" />
+        </activity>
+    </application>
+
+</manifest>

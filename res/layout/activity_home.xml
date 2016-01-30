@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".HomeActivity" >
+        
+    <Button
+        android:id="@+id/buttonRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:onClick="buttonRecipesOnClick"
+        android:background="@color/flavor"
+        android:text="@string/recipes"
+        android:textColor="@color/text" />
+
+    <Button
+        android:id="@+id/buttonIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:onClick="openIngredients"
+        android:background="@color/disabled"
+        android:text="@string/ingredient"
+        android:textColor="@color/text" />
+
+    <ImageView
+        android:id="@+id/chefHat"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/chefstools" />
+    
+</LinearLayout>

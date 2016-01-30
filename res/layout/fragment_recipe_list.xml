@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="@color/background">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/recipeList_newRecipe"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/spice"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="newRecipe"
+            android:text="@string/newRecipe"
+            android:textColor="@color/text" />
+
+        <Button
+            android:id="@+id/recipeList_searchButton"
+            android:background="@color/flavor"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="goToSearch"
+            android:text="@string/search_button"
+            android:textColor="@color/text" />
+        
+        <Button 
+            android:id="@+id/recipeList_refreshButton"
+            android:background="@color/spice"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="refreshClick"
+            android:text="@string/refreshList"
+            android:textColor="@color/text" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"        
+        android:id="@+id/listRecipes"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:choiceMode="none" />
+
+</LinearLayout>

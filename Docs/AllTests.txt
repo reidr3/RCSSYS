@@ -1,0 +1,181 @@
+
+C:\Users\Ryan\workspace\RCSSYS>set CLASSPATH=.;bin\classes;lib\junit.jar;lib\robotium-solo-5.3.1.jar;lib\hsqldb.jar 
+
+C:\Users\Ryan\workspace\RCSSYS>REM To get console-mode results from unit test execution, use the following instead: 
+
+C:\Users\Ryan\workspace\RCSSYS>REM java junit.textui.TestRunner comp3350.tests.RunUnitTests 
+
+C:\Users\Ryan\workspace\RCSSYS>java junit.swingui.TestRunner comp3350.tests.RunUnitTests 
+Start testReal...
+...finished testReal.
+
+Start testEmpty...
+...finished testEmpty.
+
+Start testNull...
+...finished testNull.
+
+Start testReal...
+...finished testReal.
+
+Start testNull...
+...finished testNull.
+
+Start testBad...
+...finished testBad.
+
+Start testChangeLifestyle...
+...finished testChangeLifestyle.
+
+Start testIngredientNaming...
+...finished testIngredientNaming.
+
+Start testChangeAllergies...
+...finished testChangeAllergies.
+
+Start testReal...
+...finished testReal.
+
+Start testEmpty...
+...finished testEmpty.
+
+Start testNull...
+...finished testNull.
+
+Start testRecipeNull...
+...finished testRecipeNull.
+
+Start testRecipeOneIng...
+...finished testRecipeOneIng.
+
+Start testOnlyTitle...
+...finished testOnlyTitle.
+
+Start testRecipeTitle...
+...finished testRecipeTitle.
+
+Start testRecipeNoIng...
+...finished testRecipeNoIng.
+
+Start testNoTitle...
+...finished testNoTitle.
+
+Start testRecipeDirections...
+...finished testRecipeDirections.
+
+Start testRecipeMultipleIng...
+...finished testRecipeMultipleIng.
+
+Start testRecipeDescription...
+...finished testRecipeDescription.
+
+Start testReal...
+Opened stub database database/sc
+...finished testReal.
+
+Closed stub database stub
+Start testNull...
+Opened stub database database/sc
+...finished testNull.
+
+Closed stub database stub
+Start testBad...
+Opened stub database database/sc
+...finished testBad.
+
+Closed stub database stub
+Start testReal...
+Opened stub database database/sc
+...finished testReal.
+
+Closed stub database stub
+Start testNull...
+Opened stub database database/sc
+...finished testNull.
+
+Closed stub database stub
+Start testBad...
+Opened stub database database/sc
+...finished testBad.
+
+Closed stub database stub
+Start testNoFilters...
+Opened stub database database/sc
+Opened stub database temp
+...finished testNoFilters.
+
+Start testMultiFilters...
+Opened stub database temp
+Opened stub database temp
+Opened stub database temp
+...finished testMultiFilters.
+
+Start testOneFilter...
+Opened stub database temp
+Opened stub database temp
+Opened stub database temp
+Opened stub database temp
+Opened stub database temp
+Opened stub database temp
+...finished testOneFilter.
+
+Start testBadFilters...
+Opened stub database temp
+...finished testBadFilters.
+
+Start testBadAndGoodFilters...
+Opened stub database temp
+Opened stub database temp
+Opened stub database temp
+Opened stub database temp
+...finished testBadAndGoodFilters.
+
+Start testBadUnits...
+...finished testBadUnits.
+
+Start testZero...
+...finished testZero.
+
+Start testSameUnit...
+...finished testSameUnit.
+
+Start testWholeNumbers...
+...finished testWholeNumbers.
+
+Start testDecimalNumbers...
+...finished testDecimalNumbers.
+
+Start testNegativeNumbers...
+...finished testNegativeNumbers.
+
+Closed stub database sc
+
+Starting Persistence test DataAccess (using stub)
+Opened stub database database/sc
+Closed stub database sc
+Finished Persistence test DataAccess (using stub)
+
+
+C:\Users\Ryan\workspace\RCSSYS>set CLASSPATH=.;bin\classes;lib\junit.jar;lib\robotium-solo-5.3.1.jar;lib\hsqldb.jar 
+
+C:\Users\Ryan\workspace\RCSSYS>REM To get console-mode results from unit test execution, use the following instead: 
+
+C:\Users\Ryan\workspace\RCSSYS>REM java junit.textui.TestRunner comp3350.tests.RunIntegrationTests 
+
+C:\Users\Ryan\workspace\RCSSYS>java junit.swingui.TestRunner comp3350.tests.RunIntegrationTests 
+
+Starting Integration test of AccessRecipes to persistence
+Opened HSQL database database/sc
+Closed HSQL database sc
+Finished Integration test of AccessRecipes to persistence
+
+Starting Integration test of AccessIngredients to persistence
+Opened HSQL database database/sc
+Closed HSQL database sc
+Finished Integration test of AccessIngredients to persistence
+
+Starting Integration test DataAccess (using default DB)
+Opened HSQL database database/sc
+Closed HSQL database sc
+Finished Integration test DataAccess (using default DB)
+
